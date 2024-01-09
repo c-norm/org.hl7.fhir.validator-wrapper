@@ -8,7 +8,14 @@ import redux.RAction
 object ValidationContextSlice {
 
     data class State(
-        val igPackageInfoSet: Set<PackageInfo> = mutableSetOf(),
+        val igPackageInfoSet: Set<PackageInfo> = mutableSetOf(
+            PackageInfo(
+                id = "hl7.fhir.us.pq-cmc",
+                fhirVersion = null,
+                url = null,
+                version = "current"
+            )
+        ),
         val extensionSet: Set<String> = mutableSetOf(),
         val profileSet: Set<String> = mutableSetOf(),
         val bundleValidationRuleSet: Set<BundleValidationRule> = mutableSetOf(),
